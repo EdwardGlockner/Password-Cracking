@@ -10,15 +10,8 @@ body {
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	justify-items: center;
-
-	font-size: 18px;
+	justify-content: center;
+	font-size: 30px;
 	background: var(--color-primary);
 	background-size: cover;
-
 }
-
-
-
-
-

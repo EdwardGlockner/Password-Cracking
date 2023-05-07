@@ -1,8 +1,14 @@
+/*
+ *
+ */
+
+// Includes
 #include <iostream>
 #include <tuple>
 #include <vector>
 #include <chrono>
 
+// Local includes
 #include "../include/brute_force.h"
 #include "../include/dictionary_attack.h"
 #include "../include/rule_based.h"
@@ -12,6 +18,8 @@
  * should check equality after each generated password
  * not generating all passwords then checking them all
  */
+
+// Function declaration
 std::tuple<std::string, std::string> flagger(int argc, char* argv[]);
 void usage_helper();
 
@@ -48,7 +56,11 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
+// Functions
 std::tuple<std::string, std::string> flagger(int argc, char* argv[]) {
+    /*
+     *
+     */
     std::string run_mode;
     std::string dirname;
     
@@ -80,5 +92,14 @@ std::tuple<std::string, std::string> flagger(int argc, char* argv[]) {
 }
 
 void usage_helper() {
-
+    /*
+     *
+     */
+    std::cout << "--------------------USAGE--------------------" << "\n";
+    std::cout << "./pw_attack -h | -m <run_mode> | -d <dirname>" << "\n";
+    std::cout << "\n-h: \t Shows the helper for running the file.\n";
+    std::cout << "\n-m: \t Sets the run mode. Available options: 'brute_force', 'dict_attack', 'rule_based'.\n";
+    std::cout << "The run mode is set to 'brute_force' by default.\n";
+    std::cout << "\n-d: \t Specifies the directory path to the dictionary which will be used, in case run_mode is set to 'dict_attack.\n";
+    std::cout << "The directory is by default set to ....\n\n";
 }
